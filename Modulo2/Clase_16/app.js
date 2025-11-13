@@ -127,7 +127,7 @@ console.log(persona1.nombre);
 
 /************** MODIFICADORES DE ACCESO ********************/
 
-class CuentaBancaria {
+/* class CuentaBancaria {
   #saldo;
 
   constructor(saldoInicial) {
@@ -144,3 +144,4 @@ const miCuentaBancaria = new CuentaBancaria(1500);
 
 //console.log(miCuentaBancaria.#saldo);
 miCuentaBancaria.depositarDinero(500);
+ */
