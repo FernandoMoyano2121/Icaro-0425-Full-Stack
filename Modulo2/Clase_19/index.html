@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .contenedorProductos {
+        display: flex;
+        gap: 2rem;
+      }
+      /* --- Estilos de la tarjeta --- */
+      .producto {
+        width: 200px;
+        padding: 15px;
+        border-radius: 12px;
+        background: #f4f4f4;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        font-family: Arial;
+        margin-bottom: 20px;
+      }
+
+      .producto img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      .producto button {
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .producto button:hover {
+        background: #2178b5;
+      }
+
+      /* --- Estilo lista --- */
+      #listaCompras {
+        margin-top: 20px;
+        font-family: Arial;
+        font-size: 1.1em;
+        padding-left: 0;
+      }
+
+      #listaCompras li {
+        list-style: none;
+        padding: 6px 10px;
+        background: #e8f0fe;
+        margin-bottom: 5px;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  <button onclick="alert('Bienvenidos')">Click</button> -->
+    <!-- <button id="button">Saludo</button> -->
+
+    <input id="input" type="text" />
+
+    <br />
+    <br />
+
+    <button id="button">Button</button>
+
+    <br />
+    <br />
+
+    <a id="enlace" href="">Enlace</a>
+
+    <br />
+    <br />
+
+    <div id="contenedor">1</div>
+    <hr />
+    <br />
+    <br />
+
+    <!-- Tarjeta -->
+
+    <div class="contenedorProductos">
+      <!-- Producto 1 -->
+      <div class="producto">
+        <img src="https://placehold.co/100x100" alt="Producto" />
+        <h3>Mouse</h3>
+        <p>Precio: $30.000</p>
+        <button class="btnComprar" data-nombre="Mouse">Agregar</button>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="producto">
+        <img src="https://placehold.co/100x100" alt="Producto" />
+        <h3>Auriculares</h3>
+        <p>Precio: $100.000</p>
+        <button class="btnComprar" data-nombre="Auriculares">Agregar</button>
+      </div>
+    </div>
+
+    <!-- Lista de productos agregados al carrito -->
+
+    <h3>Carrito</h3>
+    <ul id="listaCompras"></ul>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
