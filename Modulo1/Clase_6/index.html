@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- PSEUDOCLASES -----------------------------------------------
+
+    Las pseudoclases en CSS son una forma de 
+    seleccionar y aplicar estilos a elementos de una 
+    página web en función de su estado o su posición 
+    dentro de su contenedor, sin necesidad de modificar su HTML. 
+    Es como si fueran "estados virtuales" del elemento.
+    Se instancian con dos puntos (:) antes de la pseudoclase.
+ -->
+    <!-- PSEUDOCLASES DE INTERACCIÓN -->
+    <button>Enviar</button>
+    <input />
+
+    <!-- PSEUDOCLASES DE POSICIÓN -->
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+    </ul>
+
+    <!------------------------- PSEUDOELEMENTOS----------------------
+     Los pseudoelementos permiten agregar 
+     estilos o contenido sin modificar el HTML. 
+     Se instancian con doble dos puntos (::).
+ -->
+
+    <!--------------------------- AFTER - BEFORE -------------------->
+    <h1>Hola Alumnos</h1>
+    <h2>Hola Mundo</h2>
+
+    <!-- ::before y ::after se usan para agregar contenido
+      antes o después de un elemento. Siempre deben tener
+      un content asignado para visualizarse en el navegador.
+    -->
+
+    <!------------------------- ::FIRST - LETTER --------------------->
+    <p>Hola, esto es un parrafo</p>
+
+    <!----------------------- ::FIRST-LINE ----------------------------->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste,
+      perspiciatis. Consequuntur modi doloribus quam assumenda accusamus
+      perferendis enim iusto consectetur?
+    </p>
+
+    <!-- -------------------- ::SELECTION -------------------------------
+    Cambia el estilo del texto seleccionado por el usuario.
+    En este ejemplo cuando el usuario selecciona texto en la
+    página, se verá con fondo amarillo y letras negras.
+    -->
+    <p>Hola, esto es un parrafo</p>
+
+    <!------------------------ TRANSITIONS ------------------------------>
+
+    <!-- ¿Qué son?
+  - Las transiciones permiten cambios suaves entre un estado
+    inicial y uno final al interactuar con un elemento
+    (por ejemplo, al pasar el cursor).
+
+    Propiedades clave:
+
+  - transition-property: Propiedad que se animará (ej: background-color).
+  - transition-duration: Duración de la transición (ej: 0.5s).
+  - transition-timing-function: Define el ritmo del cambio 
+    (ej: ease, linear). - (funciones de transición)
+  - transition-delay: Tiempo antes de que inicie la transición.
+  - Las propiedades se pueden agrupar dentro de la propiedad 
+    transition de la siguiente manera:
+  - transition: property duration timing-function delay;
+ -->
+
+    <button class="button">Animation</button>
+
+    <!-------------------- FUNCIONES DE TRANSICION -----------------------
+
+    - Las funciones de transición en CSS controlan la velocidad 
+    de una animación durante su duración, modificando cómo cambia
+    un valor desde el estado inicial hasta el final. Se usan con 
+    transition-timing-function.
+
+    - linear: La animación se mueve a la misma velocidad de inicio a fin, 
+        sin aceleraciones ni desaceleraciones.
+    - ease: Es la predeterminada en CSS. Comienza rápida, desacelera y
+       luego vuelve a acelerar un poco antes de terminar.
+    - ease-in (aceleración): Comienza lento y acelera al final.
+    - ease-out (desaceleración): Comienza rápido y desacelera al final.
+
+ -->
+
+    <!--------------------------- ANIMACIONES -----------------------------
+    
+    ¿Qué son?
+    Las animaciones permiten crear efectos más complejos que las
+    transiciones, definiendo múltiples etapas con @keyframes.
+    Propiedades clave:
+    - @keyframes: Define los estados intermedios de la animación.
+    - animation-name: Nombre de los keyframes usados.
+    - animation-duration: Duración de la animación.
+    - animation-iteration-count: 1 (valor por defecto)
+        - cualquier número entero positivo (2, 5, 10 …)
+        - números decimales (2.5, 3.7 …)
+        - infinite (para bucle sin fin).
+    - animation-timing-function: Ritmo del cambio
+    ease → por defecto, empieza lento, acelera en el medio y termina lento.
+        linear → velocidad constante.
+        ease-in → empieza lento y luego acelera.
+        ease-out → empieza rápido y desacelera al final.
+        ease-in-out → empieza y termina lento, rápido en el medio.
+
+  -->
+
+    <div class="ball"></div>
+
+    <!----------------- TRANSFORMACIONES --------------------
+    
+    ¿Qué son?
+    - Las transformaciones permiten modificar visualmente los 
+    elementos con propiedades como rotar, mover, escalar o inclinar.
+    Propiedades comunes:
+    - translate(x, y): Mueve un elemento en el eje X o Y.
+    - rotate(deg): Rota el elemento en grados.
+    - scale(x, y): Escala el tamaño del elemento.
+    - skew(x, y): Inclina el elemento en el eje X o Y.
+    - matrix: Aplica una combinación de transformaciones.
+
+    -->
+
+    <div class="ejemplo ejemplo-transicion">transform</div>
+  </body>
+</html>

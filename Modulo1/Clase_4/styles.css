@@ -1,0 +1,101 @@
+.padre {
+  height: 600px;
+
+  /**************** display ****************/
+
+  display: flex;
+
+  /***************** Wrap *******************/
+
+  /*  flex-wrap: nowrap;        */
+  /* flex-wrap: wrap;           */
+  /* flex-wrap: wrap-reverse;   */
+
+  /************** direcciónamiento **********/
+
+  /*   flex-direction: row;            */
+  /*   flex-direction: row-reverse;    */
+  /*   flex-direction: column;         */
+  /*   flex-direction: column-reverse; */
+
+  /***********  Eje Horizontal/Principal X  ******/
+
+  justify-content: flex-start;
+  /*  justify-content: flex-end;       */
+  /*  justify-content: space-around;   */
+  /*  justify-content: space-between;  */
+  /*  justify-content: space-evenly;   */
+
+  /*************  Eje vertical/Secundario Y  ************/
+
+  /*  align-items: stretch;     */
+  /*  align-items: flex-start;  */
+  /*  align-items: flex-end;    */
+  /*  align-items: center;      */
+  /*  align-items: baseline;    */
+
+  /*************** Otras propiedades ******************/
+
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #026e81;
+}
+
+.hijo {
+  width: 100px;
+  height: 100px;
+  background-color: #ff9933;
+  text-align: center;
+}
+
+.hijo1 {
+  /*   padding: 30px; */
+
+  /* **************** flex-grow **************/
+
+  flex-grow: 0;
+  /* flex-grow: 1; */
+  /*  flex-grow: 2; */
+
+  /* **************** flex-shrink **************/
+
+  flex-shrink: 1;
+
+  /**************** align-self ****************/
+
+  /*  align-self: center; */
+}
+
+.hijo2 {
+  /* **************** flex-grow **************/
+
+  /*   flex-grow: 0; */
+  /*   flex-grow: 1; */
+  /*   flex-grow: 2; */
+
+  /* **************** flex-shrink **************/
+
+  /*  flex-shrink: 0; */
+  /*  flex-grow: 1; */
+  /*  flex-grow: 2; */
+
+  /**************** align-self ****************/
+
+  /*  align-self: center; */
+}
+
+.hijo3 {
+  /* **************** flex-grow **************/
+
+  flex-grow: 0;
+  /*  flex-grow: 1; */
+  /*  flex-grow: 2; */
+
+  /* **************** flex-shrink **************/
+
+  flex-shrink: 2;
+
+  /**************** align-self ****************/
+
+  /* align-self: center; */
+}

@@ -1,0 +1,233 @@
+/*
+ Estructura basica de CSS
+    1. Importante formatear
+    2. Importante generar comentarios en lugares claves
+*/
+
+/* selector {
+  propiedad: "valor";
+} */
+
+h1 {
+  color: blue;
+}
+
+/* ******************************* SELECTORES ********************************/
+
+/* SELECTOR DE ETIQUETA */
+h2 {
+  color: rgb(162, 172, 34);
+}
+
+/* SELECTOR DE CLASE */
+.titulo2 {
+  color: rgb(138, 82, 15);
+}
+
+/* SELECTOR DE ID */
+#titulo3 {
+  color: rgb(189, 41, 164);
+}
+
+/* SELECTOR DE UNIVERSAL */
+* {
+  background-color: rgb(245, 245, 245);
+}
+
+/* SELECTOR ANIDADO */
+/*
+  - Tiene sentido anidar etiquetas cuando:
+  - La etiqueta solo existe dentro de otra (li en ul, td en tr).
+  - Hay una relación semántica clara (label en form).
+  - Querés limitar estilos al contexto (h2 dentro de article).
+  */
+
+ul {
+  font-family: Arial, sans-serif; /* ✅ esta propiedad se hereda a los li */
+  color: darkblue; /* ✅ también se hereda */
+  list-style: none; /* ❌ esta NO se hereda (afecta solo al ul) */
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0; /* ✅ aquí ya limitamos el alcance solo a li dentro de ul */
+}
+
+/* ********************** PROPIEDADES COMUNES EN CSS *******************************/
+
+h3 {
+  color: blue;
+  font-size: 24px;
+  text-align: center;
+}
+
+div {
+  background-color: lightblue;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+/* ********************* UNIDADES DE MEDIDA EN CSS *******************************/
+/* *************************** ABSOLUTAS ***********************************/
+
+/*
+ Absolutas: Siempre tienen el mismo tamaño sin importar el contexto.
+ Relativas: Cambian según el tamaño del elemento padre o el viewport.
+*/
+
+/*
+px (píxeles): Unidad más usada para tamaños fijos.
+cm (centímetros): Útil para imprimir contenido.
+mm (milímetros): Similar a cm pero más pequeño.
+pt (puntos): Se usa en tipografía para impresión.
+ */
+
+.contenedor {
+  height: 30px;
+  width: 5cm;
+  border-width: 2mm;
+  font-size: 12pt;
+}
+
+/* *********************** UNIDADES RELATIVAS *********************/
+
+/*
+- em: Basada en el tamaño de la fuente del elemento padre.
+      Ejemplo: Si el font-size del padre es 16px, entonces 1em = 16px.
+- rem (root em): Basada en el tamaño de la fuente del elemento raíz (html).
+                 Más consistente que em
+- % (porcentaje): Basada en el tamaño del contenedor padre.
+- vw (viewport width): Basada en el ancho de la ventana:
+                     1vw = 1% del ancho del viewport.
+- vh (viewport height): Basada en la altura de la ventana.
+                      1vh = 1% de la altura del viewport
+ */
+
+html {
+  font-size: 16px;
+}
+.sectionPadre {
+  /* height: 10vh; */
+  width: 600px;
+}
+
+p {
+  font-size: 2rem;
+}
+
+div {
+  width: 50%;
+}
+
+.articuloHijo {
+  width: 50vw;
+}
+
+/* ********************** JERARQUIA DE SELECTORES ***********************/
+
+/*
+- El !important es una regla que anula la jerarquía de especificidad
+   y fuerza un estilo en caso de conflicto.
+  Se usa como último recurso cuando necesitas sobrescribir estilos existentes.
+- Inline styles (en línea): Tienen la mayor prioridad.
+- IDs: Son más específicos que las clases.
+- Clases, atributos y pseudoclases: Tienen menos prioridad que los IDs.
+                                   Incluyen selectores como
+                                  .boton, [type="text"] o :hover.
+- Selectores de etiqueta: Tienen la prioridad más baja.
+ */
+
+/* ************************** ESTRUCTURA BEM ************************/
+
+.card {
+  border: 1px solid #ccc; /* borde simple */
+  padding: 1rem; /* espacio interno */
+  max-width: 300px; /* ancho controlado */
+  font-family: Arial, sans-serif;
+}
+
+.card__title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card__description {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.card__button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.card__button--disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* *********************** MODELO DE CAJA ****************************/
+
+/*
+    El atributo box-sizing en CSS controla cómo se calculan las 
+    dimensiones totales de un elemento (ancho y alto) en 
+    relación con el modelo de caja.Tipos:
+
+- content-box (por defecto):
+    El ancho y alto incluyen solo el contenido.
+    El padding y el borde se añaden al tamaño total del elemento.
+    Cálculo total:
+    Total width = width + padding + border 
+
+- border-box:
+    El ancho y alto incluyen el contenido, el padding y el borde.
+    Cálculo total:
+    Total width = width (incluye padding y border)
+ */
+
+.caja {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid gray;
+  background-color: tomato;
+  color: white;
+}
+
+/***************************** TIPOS DE DISPLAY **********************/
+
+.inlineBlock {
+  width: 40px;
+  display: inline-block;
+}
+
+/* **************************** VARIABLES *****************************/
+
+:root {
+  --color-primario: #007bff;
+  --margin-global: 10px;
+}
+
+body {
+  margin: var(--margin-global);
+  color: var(--color-primario);
+}
+
+/***************************** MEDIA QUERIES *******************************/
+
+@media (min-width: 768px) {
+  html {
+    background-color: rgb(24, 24, 24);
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    background-color: rgb(138, 138, 138);
+  }
+}

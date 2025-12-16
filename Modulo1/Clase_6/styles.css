@@ -1,0 +1,179 @@
+/******************* PSEUDOCLASES DE INTERACCIÓN ******************/
+
+/* HOVER */
+
+button:hover {
+  background-color: lightblue;
+}
+
+/* ACTIVE */
+
+button:active {
+  background-color: blue;
+}
+
+/* FOCUS */
+
+input {
+  border: 2px solid gray;
+  padding: 8px;
+  outline: none; /* quita el borde azul por defecto del navegador */
+}
+
+input:focus {
+  border-color: red; /* ahora sí se verá rojo */
+}
+
+/********************** PSEUDOCLASES DE POSICIÓN ************************/
+
+/* :first-child → Selecciona el primer hijo */
+ul li:first-child {
+  color: red;
+  font-weight: bold;
+}
+
+/* :last-child → Selecciona el último hijo */
+ul li:last-child {
+  color: green;
+  font-weight: bold;
+}
+
+/* :nth-child(n) → Selecciona el hijo en la posición n */
+ul li:nth-child(3) {
+  color: blue;
+  font-weight: bold;
+}
+
+/* :nth-last-child(n) → Selecciona el hijo n empezando desde el final */
+
+ul li:nth-last-child(2) {
+  color: purple;
+  font-weight: bold;
+}
+
+/* ******************** PESUDOELEMENTOS ***************************** */
+
+h1::before {
+  content: "★ ";
+  color: gold;
+}
+
+/* *****************************BEFORE - AFTER *****************************/
+
+p::before {
+  content: "🌟 ";
+  color: gold;
+}
+
+p::after {
+  content: " - PATO 🦆";
+  color: red;
+}
+
+/* ***************************** FIRST - LETTER ***************************/
+
+p::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+  color: blue;
+}
+
+/* ***************************** FIRST - LINE *****************************/
+
+/* p::first-line {
+  color: green;
+  font-weight: bold;
+}
+ */
+
+/* ***************************** SELECTION *****************************/
+
+p::selection {
+  background: yellow;
+  color: black;
+}
+
+/* ***************************** TRANSICIONES ***************************/
+
+.button {
+  width: 100px;
+  background-color: #007bff;
+  padding: 8px;
+  color: white;
+  border: none;
+  transition: background-color 0.7s ease 0.2s;
+}
+
+/* 
+- background-color → propiedad a animar
+- 0.7s → duración
+- ease-in-out → función de tiempo
+- 0.2s → delay
+*/
+
+.button:hover {
+  background-color: white;
+  color: #007bff;
+}
+
+/* ***************************** ANIMACIONES ***************************/
+
+/* .ball {
+  width: 60px;
+  height: 60px;
+  background: orange;
+  border-radius: 50%;
+  position: relative;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 120px;
+  }
+} */
+
+/* **************************** TRANSFORMACIONES ***********************/
+
+/* 
+  .ejemplo muestra varias transformaciones CSS:
+  - translate(50px, 100px): Mueve el elemento 50px a la derecha y 100px hacia abajo, 
+    pero no afecta el flujo de los demás elementos, solo su posición visual.
+  - scale(1.5, 1.5): Escala el elemento 1.5 veces su tamaño original en ambos ejes.
+    Esto puede hacer que el elemento "invada" el espacio visual de otros, pero no 
+    modifica el flujo del documento, es decir, los demás elementos no se reubican.
+  - skew(20deg, 10deg): Inclina el elemento 20 grados en X y 10 grados en Y, 
+    distorsionando su forma pero sin afectar el flujo.
+*/
+.ejemplo {
+  width: 100px;
+  height: 100px;
+  margin: 2rem;
+  background-color: #007bff;
+  /* Mueve el elemento visualmente, no afecta el flujo */
+  transform: translate(50px, 100px);
+  /* Escala el elemento, puede invadir el espacio visual de otros pero no mueve su posición en el flujo */
+  transform: scale(1.5, 1.5);
+  /* Inclina el elemento, distorsionando su forma sin afectar el flujo */
+  /*  transform: skew(20deg, 10deg); */
+}
+
+/* ---------------------------------------------------------------- */
+
+.ejemplo-transicion {
+  width: 100px;
+  height: 100px;
+  background-color: #007bff;
+  /* Aplica transición a transform para suavizar el cambio */
+  transition: transform 0.7s ease;
+  /* Estado inicial sin escala */
+  transform: scale(1);
+}
+
+/* Al pasar el mouse, escala el elemento lentamente */
+.ejemplo-transicion:hover {
+  transform: scale(1.5);
+}

@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Montserrat";
+}
+
+/**************************** HEADER *************************/
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logo {
+  font-weight: bold;
+  color: #0034ff;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #0034ff;
+}
+
+.btn {
+  border: none;
+  padding: 8px;
+  background-color: #0034ff;
+  color: white;
+  border-radius: 4px;
+}
+
+/********************* SECCION HERO ********************/
+
+.hero {
+  background-color: #0034ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+.descripcion {
+  width: 40%;
+  color: white;
+}
+.titulo {
+  color: white;
+}
+
+/********************** SECCION DIPLOMATURAS ******************/
+
+.diplomaturas {
+  padding: 2rem;
+  font-family: sans-serif;
+}
+/* FILTROS */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filtros button {
+  border: 1px solid #0034ff;
+  background: white;
+  color: #0034ff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.filtros .activo {
+  background: #0034ff;
+  color: white;
+}
+
+/* GRID DE CARDS */
+.diplomaturas-grid {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
+  grid-template-columns: repeat(3, 1fr); /* siempre 3 columnas iguales */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border: 2px solid #0034ff;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 100px; /* altura fija para todas las imágenes */
+  object-fit: cover; /* recorta manteniendo la proporción */
+  border-radius: 8px;
+}
+
+.card h3 {
+  color: #0034ff;
+  font-size: 1.1rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.precio-antes {
+  text-decoration: line-through;
+  color: #777;
+  font-size: 0.9rem;
+  display: block;
+}
+
+.precio-ahora {
+  color: #0034ff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: block;
+  margin: 0.3rem 0;
+}
+
+.card button {
+  background: #0034ff;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Css</title>
+  </head>
+  <style>
+    /* ESTILOS INTERNOS */
+    h1 {
+      color: rgb(26, 187, 20);
+    }
+  </style>
+  <body>
+    <!-- ESTILOS EN LINEA -->
+    <h1 class="titulo" style="color: red">Hola Alumnos</h1>
+
+    <!-- -------------------------SELECTORES ------------------------------------>
+
+    <!-- SELECTOR DE ETIQUETA -->
+    <h2>Selector de etiqueta</h2>
+
+    <!-- SELECTOR DE CLASE -->
+    <h2 class="titulo2">Selector de clase</h2>
+
+    <!-- SELECTOR DE ID -->
+    <h2 id="titulo3">Selector de id</h2>
+
+    <!-- SELECTOR ANIDADO -->
+    <ul>
+      <li>Inicio</li>
+      <li>Servicios</li>
+      <li>Nosotros</li>
+      <li>Contacto</li>
+    </ul>
+
+    <!-------------------------- PROPIEDADES COMUNES-------------------->
+
+    <h3>Icaro</h3>
+    <div>Estudiantes</div>
+    <br />
+    <br />
+    <br />
+    <!------------------------ UNIDADES DE MEDIDA ---------------------->
+
+    <div class="contenedor">Contenedor genérico</div>
+
+    <!-- --------------------- UNIDADES RELATIVAS ---------------------->
+    <section class="sectionPadre">
+      <p>parrafo</p>
+      <div>div</div>
+      <article class="articuloHijo">section</article>
+    </section>
+
+    <!-- ------------------------- ESTRUCTURA BEM ----------------------------->
+    <!--
+         Block: El componente principal.
+                Ejemplo: .card
+        Element: Parte del bloque, vinculado a su funcionalidad.
+                 Ejemplo: .card__title
+        Modifier: Variación de estilo del bloque o elemento.
+                 Ejemplo: .card__title card__title--disabled
+    -->
+    <article class="card">
+      <h3 class="card__title">card</h3>
+      <p class="card__description">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum,
+        veritatis?
+      </p>
+      <button class="card__button card__button--disabled">Comprar</button>
+    </article>
+
+    <!-- ------------------- MODELO DE CAJA --------------------------->
+    <!----------- margin, padding border, width, height  -------------->
+
+    <div class="caja">Caja</div>
+
+    <!------------------------ TIPOS DE DISPLAY ------------------------------>
+    <!--
+     Tipos de display:
+    - Inline: Los elementos se alinean en una fila. No respetan width ni height.
+    - Block: Ocupan todo el ancho disponible. Respetan width y height.
+    - Inline-block: Se alinean en fila, pero respetan width y height.
+ -->
+
+    <!-- INLINE -->
+    <a href="">Etiqueta en linea</a>
+    <a href="">Etiqueta en linea</a>
+
+    <!-- EN BLOQUE -->
+    <div>Etiqueta en bloque</div>
+
+    <!-- INLINE BLOCK -->
+    <div class="inlineBlock">Inline block</div>
+    <div class="inlineBlock">Inline block</div>
+    <div class="inlineBlock">Inline block</div>
+
+    <!-- -------------------------- POSITION ---------------------------------->
+
+    <!--
+  - static: sigue el flujo normal.
+  - Relative: Posiciona un elemento respecto a su posición original.
+  - Absolute: Se posiciona respecto a su contenedor padre posicionado.
+  - Fixed: Se posiciona respecto al viewport, permanece fijo al hacer scroll.
+  - Sticky: Cambia entre relativo y fijo según el desplazamiento.
+  -->
+
+    <!--------------------------- MEDIA QUERIES ----------------------------->
+  </body>
+</html>
