@@ -1,0 +1,168 @@
+/* =============================================
+   ESTILOS PERSONALIZADOS - EcoLife
+   ============================================= */
+
+/* Importar fuente moderna */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* ===== Variables de color ===== */
+:root {
+  --color-primary: #28a745;
+  --color-secondary: #20c997;
+  --color-dark: #212529;
+  --color-light: #f8f9fa;
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  color: var(--color-dark);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===== CLASE PERSONALIZADA 1: Hero Section ===== */
+
+.hero-section {
+  background: linear-gradient(rgba(40, 167, 69, 0.8), rgba(32, 201, 151, 0.8)),
+    url("../images/hero.jpg") center/cover;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Efecto de transición suave */
+  transition: all 0.3s ease;
+}
+
+.hero-section:hover {
+  transform: scale(1.02);
+}
+
+/* ===== CLASE PERSONALIZADA 2: Custom List ===== */
+
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.custom-list li {
+  padding: 10px 0;
+  padding-left: 30px;
+  position: relative;
+  /* Transición para efecto hover */
+  transition: transform 0.2s ease;
+}
+
+.custom-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.custom-list li:hover {
+  transform: translateX(5px);
+  color: var(--color-primary);
+}
+
+/* ===== CLASE PERSONALIZADA 3: Product Card ===== */
+.product-card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Efecto de elevación al pasar el mouse */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card .card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.product-features {
+  font-size: 0.9em;
+  color: #666;
+  padding-left: 20px;
+}
+
+.price {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-top: 10px;
+}
+
+/* ===== Estilos del Formulario ===== */
+.form-container {
+  background: white;
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+/* ===== Lista ordenada personalizada ===== */
+.reasons-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.reasons-list li {
+  padding: 15px 0;
+  font-size: 1.1em;
+}
+
+/* ===== Footer ===== */
+footer a {
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+footer a:hover {
+  opacity: 0.8;
+}
+
+/* ===== Media Queries - Diseño Responsivo ===== */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 300px;
+  }
+
+  .hero-section h2 {
+    font-size: 2em;
+  }
+
+  .product-card .card-img-top {
+    height: 200px;
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h2 {
+    font-size: 1.5em;
+  }
+
+  .display-4 {
+    font-size: 2em;
+  }
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CDN Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Enlace a la hoja de estilos -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Productos</title>
+  </head>
+  <body>
+    <!-- header (el mismo para todas las paginas)-->
+
+    <header class="bg-success">
+      <!-- Menu de navegación -->
+      <nav class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img class="me-3" width="50px" src="../assets/LOGO.png" alt="" />
+            <span class="mb-0 text-bold text-white">EcoLife</span>
+          </div>
+
+          <ul class="nav gap-3">
+            <li class="nav-item">
+              <a class="text-white" href="../index.html">inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-white" href="./productos.html">productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-white" href="#">contacto</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="container my-5">
+      <h2 class="text-center mb-4">Contáctanos</h2>
+      <p class="text-center mb-5">Estamos aquí para ayudarte</p>
+
+      <div class="row">
+        <!-- Formulario -->
+        <div class="col-md-7">
+          <div class="form-container p-4 shadow rounded">
+            <h3 class="mb-4">Envíanos un Mensaje</h3>
+
+            <form action="#" method="post">
+              <!-- Campo Nombre -->
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre Completo *</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Juan Pérez"
+                  required
+                />
+              </div>
+
+              <!-- Campo Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label"
+                  >Correo Electrónico *</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="tu@email.com"
+                  required
+                />
+              </div>
+
+              <!-- Campo Mensaje -->
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje *</label>
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  name="mensaje"
+                  rows="5"
+                  placeholder="Escribe tu mensaje aquí..."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Botón Enviar -->
+              <button type="submit" class="btn btn-success w-100 btn-lg">
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Información de Contacto -->
+        <div class="col-md-5">
+          <div class="contact-info p-4 bg-light rounded">
+            <h3 class="mb-4">Información</h3>
+
+            <div class="mb-4">
+              <h5>Dirección</h5>
+              <hr />
+              <p>Av. Ecológica 1234<br />Buenos Aires, Argentina</p>
+            </div>
+
+            <div class="mb-4">
+              <h5>Teléfono</h5>
+              <hr />
+              <p>+54 9 11 5555-6789</p>
+            </div>
+
+            <div class="mb-4">
+              <h5>Email</h5>
+              <hr />
+              <p><a href="mailto:info@ecolife.com">info@ecolife.com</a></p>
+            </div>
+
+            <div class="mb-4">
+              <h5>Horarios</h5>
+              <hr />
+              <ul>
+                <li>Lunes a Viernes: 9:00 - 18:00</li>
+                <li>Sábados: 10:00 - 14:00</li>
+                <li>Domingos: Cerrado</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer (mismo en todas las paginas) -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>EcoLife</h5>
+            <p>Productos ecológicos para un futuro sostenible</p>
+          </div>
+          <div class="col-md-6 text-end">
+            <h5>Síguenos</h5>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              class="text-white me-3"
+              >Facebook</a
+            >
+            <a href="https://instagram.com" target="_blank" class="text-white"
+              >Instagram</a
+            >
+          </div>
+        </div>
+        <hr class="my-3 bg-white" />
+        <p class="text-center mb-0">
+          &copy; 2025 EcoLife. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

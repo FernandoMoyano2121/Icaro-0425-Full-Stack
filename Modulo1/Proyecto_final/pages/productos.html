@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CDN Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Enlace a la hoja de estilos -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Productos</title>
+  </head>
+  <body>
+    <!-- header (el mismo para todas las paginas)-->
+
+    <header class="bg-success">
+      <!-- Menu de navegación -->
+      <nav class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img class="me-3" width="50px" src="../assets/LOGO.png" alt="" />
+            <span class="mb-0">EcoLife</span>
+          </div>
+
+          <ul class="nav gap-3">
+            <li class="nav-item">
+              <a class="text-white" href="../index.html">inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-white" href="#">productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-white" href="./contacto.html">contacto</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="container my-5">
+      <h2 class="text-center mb-4">Nuestros Productos</h2>
+      <p class="text-center mb-5">
+        Descubre nuestra selección de productos ecológicos
+      </p>
+
+      <!-- Grid de productos -->
+      <div class="row g-4">
+        <!-- Producto 1 -->
+        <div class="col-md-4">
+          <div class="card product-card h-100">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1752097162079-b1fe0d515b3d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1112"
+              class="card-img-top"
+              alt="Cepillo de bambú"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Cepillo de Bambú</h5>
+              <p class="card-text">
+                Cepillo dental 100% biodegradable con cerdas naturales.
+              </p>
+              <!-- Lista de características -->
+              <ul class="product-features">
+                <li>Material: Bambú orgánico</li>
+                <li>Cerdas de carbón activado</li>
+                <li>Biodegradable</li>
+              </ul>
+              <p class="price">$8.99</p>
+              <button class="btn btn-success w-100">Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="col-md-4">
+          <div class="card product-card h-100">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1752003759489-8f3519447505?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074"
+              class="card-img-top"
+              alt="Bolsas reutilizables"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Set de Bolsas</h5>
+              <p class="card-text">
+                5 bolsas de algodón orgánico para tus compras.
+              </p>
+              <ul class="product-features">
+                <li>Algodón 100% orgánico</li>
+                <li>Lavables a máquina</li>
+                <li>Capacidad 3kg c/u</li>
+              </ul>
+              <p class="price">$15.99</p>
+              <button class="btn btn-success w-100">Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="col-md-4">
+          <div class="card product-card h-100">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1681414842916-cc6d188d8328?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171"
+              class="card-img-top"
+              alt="Botella térmica"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Botella Térmica</h5>
+              <p class="card-text">
+                Acero inoxidable, mantiene temperatura 24h. Unico en el pais
+              </p>
+              <ul class="product-features">
+                <li>Capacidad: 750ml</li>
+                <li>Libre de BPA</li>
+                <li>Doble pared aislante</li>
+              </ul>
+              <p class="price">$24.99</p>
+              <button class="btn btn-success w-100">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Información adicional -->
+      <section class="mt-5 p-4 bg-light rounded">
+        <h3 class="text-center">Beneficios de Comprar con Nosotros</h3>
+        <div class="row text-center mt-4">
+          <div class="col-md-4">
+            <h5>🚚 Envío Gratis</h5>
+            <p>En compras +$50</p>
+          </div>
+          <div class="col-md-4">
+            <h5>📦 Embalaje Eco</h5>
+            <p>100% reciclado</p>
+          </div>
+          <div class="col-md-4">
+            <h5>🌍 Carbono Neutral</h5>
+            <p>Emisiones compensadas</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>EcoLife</h5>
+            <p>Productos ecológicos para un futuro sostenible</p>
+          </div>
+          <div class="col-md-6 text-end">
+            <h5>Síguenos</h5>
+            <!-- Enlaces externos -->
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              class="text-white me-3"
+              >Facebook</a
+            >
+            <a href="https://instagram.com" target="_blank" class="text-white"
+              >Instagram</a
+            >
+          </div>
+        </div>
+        <hr class="my-3 bg-white" />
+        <p class="text-center mb-0">
+          &copy; 2025 EcoLife. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
