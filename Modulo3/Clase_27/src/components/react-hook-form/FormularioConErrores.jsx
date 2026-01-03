@@ -24,6 +24,7 @@ export const FormularioConErrores = () => {
             placeholder="ingresa tu nombre"
           />
         </div>
+        {errors.nombre && <p>{errors.nombre.message}</p>}
 
         <div>
           <label>Email: </label>
@@ -38,7 +39,6 @@ export const FormularioConErrores = () => {
             placeholder="Ingresa tu email"
             type="email"
           />
-          {errors.nombre && <p>{errors.nombre.message}</p>}
 
           {errors.email && <p>{errors.email.message}</p>}
         </div>
