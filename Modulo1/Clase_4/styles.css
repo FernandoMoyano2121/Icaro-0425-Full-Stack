@@ -1,101 +1,101 @@
 .padre {
-  height: 600px;
+  height: 600px; /* Altura del contenedor flex */
 
   /**************** display ****************/
 
-  display: flex;
+  display: flex; /* Convierte el contenedor en un flex container */
 
   /***************** Wrap *******************/
 
-  /*  flex-wrap: nowrap;        */
-  /* flex-wrap: wrap;           */
-  /* flex-wrap: wrap-reverse;   */
+  /* flex-wrap: nowrap;        */ /* Los hijos NO saltan de línea */
+  /* flex-wrap: wrap;          */ /* Los hijos pueden pasar a otra fila */
+  /* flex-wrap: wrap-reverse;  */ /* Wrap pero en orden inverso */
 
   /************** direcciónamiento **********/
 
-  /*   flex-direction: row;            */
-  /*   flex-direction: row-reverse;    */
-  /*   flex-direction: column;         */
-  /*   flex-direction: column-reverse; */
+  /* flex-direction: row;            */ /* Dirección horizontal (por defecto) */
+  /* flex-direction: row-reverse;    */ /* Horizontal invertida */
+  /* flex-direction: column;         */ /* Dirección vertical */
+  /* flex-direction: column-reverse; */ /* Vertical invertida */
 
-  /***********  Eje Horizontal/Principal X  ******/
+  /***********  Eje Horizontal / Principal X  ******/
 
-  justify-content: flex-start;
-  /*  justify-content: flex-end;       */
-  /*  justify-content: space-around;   */
-  /*  justify-content: space-between;  */
-  /*  justify-content: space-evenly;   */
+  justify-content: flex-start; /* Alinea los hijos al inicio del eje principal */
+  /* justify-content: flex-end;       */ /* Alinea al final */
+  /* justify-content: space-around;   */ /* Espacio alrededor de cada hijo */
+  /* justify-content: space-between;  */ /* Espacio solo entre hijos */
+  /* justify-content: space-evenly;   */ /* Espacio igual entre y en los bordes */
 
-  /*************  Eje vertical/Secundario Y  ************/
+  /*************  Eje vertical / Secundario Y  ************/
 
-  /*  align-items: stretch;     */
-  /*  align-items: flex-start;  */
-  /*  align-items: flex-end;    */
-  /*  align-items: center;      */
-  /*  align-items: baseline;    */
+  /* align-items: stretch;     */ /* Estira los hijos en el eje secundario */
+  /* align-items: flex-start;  */ /* Alinea arriba */
+  /* align-items: flex-end;    */ /* Alinea abajo */
+  /* align-items: center;      */ /* Centra verticalmente */
+  /* align-items: baseline;    */ /* Alinea según la línea base del texto */
 
   /*************** Otras propiedades ******************/
 
-  gap: 1rem;
-  padding: 1rem;
-  background-color: #026e81;
+  gap: 1rem; /* Espacio entre los elementos hijos */
+  padding: 1rem; /* Espacio interno del contenedor */
+  background-color: #026e81; /* Color de fondo del contenedor */
 }
 
 .hijo {
-  width: 100px;
-  height: 100px;
-  background-color: #ff9933;
-  text-align: center;
+  width: 100px; /* Ancho fijo del elemento */
+  height: 100px; /* Alto fijo del elemento */
+  background-color: #ff9933; /* Color de fondo del hijo */
+  text-align: center; /* Centra el texto horizontalmente */
 }
 
 .hijo1 {
-  /*   padding: 30px; */
+  /* padding: 30px; */ /* Espacio interno del hijo */
 
   /* **************** flex-grow **************/
 
-  flex-grow: 0;
-  /* flex-grow: 1; */
-  /*  flex-grow: 2; */
+  flex-grow: 0; /* No crece para ocupar espacio sobrante */
+  /* flex-grow: 1; */ /* Crece proporcionalmente */
+  /* flex-grow: 2; */ /* Crece el doble que un grow:1 */
 
   /* **************** flex-shrink **************/
 
-  flex-shrink: 1;
+  flex-shrink: 1; /* Puede reducir su tamaño si falta espacio */
 
   /**************** align-self ****************/
 
-  /*  align-self: center; */
+  /* align-self: center; */ /* Alineación individual en el eje secundario */
 }
 
 .hijo2 {
   /* **************** flex-grow **************/
 
-  /*   flex-grow: 0; */
-  /*   flex-grow: 1; */
-  /*   flex-grow: 2; */
+  /* flex-grow: 0; */ /* No crece */
+  /* flex-grow: 1; */ /* Crece normalmente */
+  /* flex-grow: 2; */ /* Crece más que los demás */
 
   /* **************** flex-shrink **************/
 
-  /*  flex-shrink: 0; */
-  /*  flex-grow: 1; */
-  /*  flex-grow: 2; */
+  /* flex-shrink: 0; */ /* No se achica */
+  /* flex-shrink: 1; */ /* Se achica normalmente */
+  /* flex-shrink: 2; */ /* Se achica más que los demás */
 
   /**************** align-self ****************/
 
-  /*  align-self: center; */
+  /* align-self: center; */ /* Alineación independiente */
 }
 
 .hijo3 {
   /* **************** flex-grow **************/
 
-  flex-grow: 0;
-  /*  flex-grow: 1; */
-  /*  flex-grow: 2; */
+  flex-grow: 0; /* No ocupa espacio adicional */
+  /* flex-grow: 1; */ /* Ocupa espacio sobrante */
+  /* flex-grow: 2; */ /* Ocupa más espacio que otros */
 
   /* **************** flex-shrink **************/
 
-  flex-shrink: 2;
+  flex-shrink: 2; /* Se reduce más rápido al faltar espacio */
 
   /**************** align-self ****************/
 
-  /* align-self: center; */
+  /* align-self: center; */ /* Posición individual en el eje Y */
 }
