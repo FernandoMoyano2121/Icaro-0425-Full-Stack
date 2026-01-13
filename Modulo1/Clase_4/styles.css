@@ -34,6 +34,8 @@
   /* align-items: center;      */ /* Centra verticalmente */
   /* align-items: baseline;    */ /* Alinea según la línea base del texto */
 
+  /*****************  Alineacion del contenido  ************/
+
   /*************** Otras propiedades ******************/
 
   gap: 1rem; /* Espacio entre los elementos hijos */
