@@ -12,6 +12,16 @@ button:active {
   background-color: blue;
 }
 
+/* VALID E INVALID */
+
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
+}
+
 /* FOCUS */
 
 input {
@@ -112,8 +122,8 @@ p::selection {
 */
 
 .button:hover {
-  background-color: white;
-  color: #007bff;
+  color: white;
+  background-color: #007bff;
 }
 
 /* ***************************** ANIMACIONES ***************************/
@@ -153,12 +163,27 @@ p::selection {
   height: 100px;
   margin: 2rem;
   background-color: #007bff;
+  transition: transform 0.3s ease;
+}
+
+.ejemplo:hover {
   /* Mueve el elemento visualmente, no afecta el flujo */
   transform: translate(50px, 100px);
+
   /* Escala el elemento, puede invadir el espacio visual de otros pero no mueve su posición en el flujo */
-  transform: scale(1.5, 1.5);
+  /* transform: scale(1.5); */
+
   /* Inclina el elemento, distorsionando su forma sin afectar el flujo */
   /*  transform: skew(20deg, 10deg); */
+
+  /* Mueve el elemento visualmente, no afecta el flujo */
+  /*  transform: translate(50px, 100px); */
+
+  /* Inclina el elemento, distorsionando su forma sin afectar el flujo */
+  /*  transform: skew(20deg, 10deg); */
+
+  /* Escala el elemento, puede invadir el espacio visual de otros pero no mueve su posición en el flujo */
+  /* transform: scale(1.5); */
 }
 
 /* ---------------------------------------------------------------- */
@@ -166,14 +191,16 @@ p::selection {
 .ejemplo-transicion {
   width: 100px;
   height: 100px;
-  background-color: #007bff;
-  /* Aplica transición a transform para suavizar el cambio */
-  transition: transform 0.7s ease;
-  /* Estado inicial sin escala */
-  transform: scale(1);
+  margin: 2rem;
+  background-color: #ff8800;
+  transition: transform 0.4s ease;
 }
 
-/* Al pasar el mouse, escala el elemento lentamente */
 .ejemplo-transicion:hover {
-  transform: scale(1.5);
+  width: 100px;
+  height: 100px;
+  background-color: #007bff;
+  /* Aplica transición a transform para suavizar el cambio */
+
+  transform: translate(50px, 100px);
 }
