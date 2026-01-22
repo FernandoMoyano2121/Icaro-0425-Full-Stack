@@ -1,0 +1,45 @@
+/* Estilos de Home */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.message {
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+  background-color: #fafafa;
+  border-radius: 8px;
+}
+
+.error {
+  text-align: center;
+  padding: 1rem;
+  color: #f44336;
+  background-color: #ffebee;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
