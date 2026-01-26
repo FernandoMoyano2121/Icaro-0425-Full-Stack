@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <!-- 
+    d-flex         → Convierte el body en un contenedor Flexbox
+    flex-column    → Organiza los elementos hijos en forma vertical
+    min-vh-100     → Asegura que el body tenga al menos la altura total del viewport
+                     (necesario para empujar el footer al fondo de la pantalla)
+-->
+  <body class="d-flex flex-column min-vh-100">
+    <!-- ==================================================== -->
+    <!--                      NAVEGACIÓN                      -->
+    <!-- ===================================================== -->
+    <!--
+        navbar            → Componente de barra de navegación de Bootstrap
+        navbar-expand-lg  → La navbar se expande (horizontal) desde pantallas grandes (lg)
+        navbar-dark       → Ajusta los colores del texto para fondos oscuros
+        bg-primary        → Aplica el color primario de Bootstrap como fondo
+        justify-content-center → Centra horizontalmente el contenido (Flexbox)
+    -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-center"
+    >
+      <!--
+            navbar-brand → Identifica la marca o logo del sitio
+            col-12        → Ocupa el 100% del ancho disponible
+            text-center   → Centra el texto horizontalmente
+        -->
+      <a class="navbar-brand col-12 text-center" href="#">ICARO</a>
+    </nav>
+
+    <!-- ===================================================== -->
+    <!--                        SERVICIOS                       -->
+    <!-- ======================================================= -->
+    <!--
+        container → Contenedor con ancho máximo responsivo
+        my-5      → Margen vertical (top y bottom) tamaño 5
+    -->
+    <div class="container my-5">
+      <!-- text-center → Centra el texto horizontalmente -->
+      <h1 class="text-center">Nuestros Servicios</h1>
+      <!-- row → Fila del sistema de grillas de Bootstrap -->
+      <div class="row">
+        <!-- col-md-4 → En pantallas medianas o mayores ocupa 4 columnas (12/3) -->
+        <div class="col-md-4">
+          <!-- card → Componente de tarjeta -->
+          <div class="card">
+            <!-- card-body → Contenido interno de la tarjeta -->
+            <div class="card-body">
+              <!-- card-title → Título de la tarjeta -->
+              <h5 class="card-title">Servicio 1</h5>
+              <!-- card-text → Texto descriptivo de la tarjeta -->
+              <p class="card-text">Descripción del servicio.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Servicio 2</h5>
+              <p class="card-text">Descripción del servicio.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Servicio 3</h5>
+              <p class="card-text">Descripción del servicio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================ -->
+    <!--               FORMULARIO CONTACTO                -->
+    <!-- ================================================ -->
+    <div class="container my-5">
+      <!-- text-center → Centra el encabezado -->
+      <h2 class="text-center">Contáctanos</h2>
+
+      <form>
+        <!-- mb-3 → Margen inferior tamaño 3 -->
+        <div class="mb-3">
+          <!-- form-label → Estilo Bootstrap para etiquetas de formularios -->
+          <label for="nombre" class="form-label">Nombre</label>
+          <!-- form-control → Estilo estándar para inputs -->
+          <input type="text" class="form-control" id="nombre" />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="email" />
+        </div>
+
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <!-- rows="3" → Altura inicial del textarea -->
+          <textarea class="form-control" id="mensaje" rows="3"></textarea>
+        </div>
+
+        <!--
+            btn → Clase base de botón
+            btn-primary    → Botón con color primario
+            -->
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+    <!-- ================================================ -->
+    <!--                      FOOTER                      -->
+    <!-- ================================================ -->
+
+    <!--
+        bg-dark     → Fondo oscuro
+        text-white  → Texto blanco
+        text-center → Texto centrado
+        py-3        → Padding vertical tamaño 3
+        col-12      → Ocupa todo el ancho
+        mt-auto → Aplica margin-top automático en Flexbox,
+              ocupando el espacio libre disponible y
+              empujando el footer hacia la parte inferior
+              cuando el contenido es insuficiente
+    -->
+    <footer class="bg-dark text-white text-center py-3 col-12 mt-auto">
+      <p>&copy; 2024 ICARO</p>
+    </footer>
+  </body>
+</html>
