@@ -174,30 +174,32 @@ switch (numero) {
 en un formulario.
 
 Instrucciones:
-Pide al usuario su edad y si tiene licencia de conducir
-Si no tiene edad suficiente (18), indica que no puede conducir.
+- Pide al usuario su edad y si tiene licencia de conducir
+- Si no tiene edad suficiente (18), indica que no puede conducir.
+
 Valida si puede conducir:
-Si tiene más de 18 años y licencia: "Puedes conducir."
-De lo contrario: "No puedes conducir."
-Tienes un momento para intentarlo…
+- Si tiene más de 18 años y licencia: "Puedes conducir."
+  De lo contrario: "No puedes conducir."
+  Tienes un momento para intentarlo…
  */
 
 /* OPCION 1 */
 
-/* let edadPersona = parseInt(prompt("Cual es tu edad?"));
+let edadPersona = parseInt(prompt("Cual es tu edad?"));
 let conlicencia = prompt("¿Tienes Licencia de conducir?(Si/No)").toLowerCase();
 
-if (edad < 18) {
+if (edadPersona < 18) {
   alert("No puedes conducir");
-} else if (edad >= 18 && conlicencia === "si") {
+} else if (edadPersona >= 18 && conlicencia === "si") {
   alert("Puedes conducir");
 } else {
   alert("No puedes conducir");
 }
- */
-/* OPCION 2 */
 
-/* let edadPersona = parseInt(prompt("¿Cuál es tu edad?"));
+/* ************************ OPCION 2 ****************************/
+
+/*
+ let edadPersona = parseInt(prompt("¿Cuál es tu edad?"));
 let conLicencia = prompt("¿Tienes licencia de conducir? (Si/No)").toLowerCase();
 
 if (edadPersona < 18) {
@@ -208,9 +210,10 @@ if (edadPersona < 18) {
   alert("No puedes conducir");
 } */
 
-/* OPCION 3 */
+/* **************************OPCION 3 *****************************/
 
-/* let edad = parseInt(prompt("¿Cuál es tu edad?"));
+/*
+let edad = parseInt(prompt("¿Cuál es tu edad?"));
 let licencia = prompt("¿Tienes licencia de conducir? (Si/No)").toLowerCase();
 
 let mensaje =
@@ -223,7 +226,7 @@ let mensaje =
 alert(mensaje);
  */
 
-/* OPCION 4 */
+/* *******************************OPCION 4 **************************/
 
 /* let edad = parseInt(prompt("¿Cuál es tu edad?"));
 let licencia = prompt("¿Tienes licencia de conducir? (Si/No)").toLowerCase();
@@ -240,9 +243,10 @@ switch (true) {
 }
  */
 
-/* OPCION 5 */
+/* *******************************OPCION 5 ********************************/
 
-/* let edad = parseInt(prompt("¿Cuál es tu edad?"));
+/*
+ let edad = parseInt(prompt("¿Cuál es tu edad?"));
 let licencia = prompt("¿Tienes licencia de conducir? (Si/No)").toLowerCase();
 
 let puedeConducir = edad >= 18 && licencia === "si";

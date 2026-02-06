@@ -89,6 +89,29 @@ continuá ejectuando éste codigo
 
 /* |||||||||||||||||||| TABLA DE MULTIPLICAR CON WHILE ||||||||||||||||||||||||| */
 
+/*
+ isNaN("hola")   // true
+isNaN(123)      // false
+isNaN("123")    // false  ← se convierte a número
+isNaN(true)     // false  ← true → 1
+isNaN(undefined)// true//  
+
+El problema de isNaN
+Hace coerción de tipos, y eso confunde:
+
+isNaN(" ")   // false  ← se convierte a 0 😐
+isNaN(null)  // false  ← null → 0
+
+La manera moderna
+
+Number.isNaN(NaN)        // true
+Number.isNaN("hola")    // false
+Number.isNaN(undefined) // false
+
+✔️ No convierte tipos
+✔️ Solo devuelve true si el valor es realmente NaN
+*/
+
 let numeroIngresado1 = parseInt(prompt("Ingresa un numero"));
 
 if (
@@ -155,7 +178,7 @@ for (
   intentoUsuario++
 ) {
   let eleccionUsuario = parseInt(
-    prompt("Ingresa un número para intentar adivinar el secreto")
+    prompt("Ingresa un número para intentar adivinar el secreto"),
   );
 
   // Si el jugador acierta
@@ -172,7 +195,7 @@ for (
   // Si llega al último intento sin adivinar
   if (intentoUsuario === intentosTotales) {
     alert(
-      `No lograste adivinar el número secreto. El número era ${numeroSecreto}.`
+      `No lograste adivinar el número secreto. El número era ${numeroSecreto}.`,
     );
     break;
   }
