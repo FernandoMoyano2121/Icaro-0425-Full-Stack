@@ -96,7 +96,7 @@ function elegirPersonaje(opcion) {
 
 // Pedir opción al usuario
 let opcion = prompt(
-  "Elige tu personaje:\n1 - Guerrero ⚔️\n2 - Mago 🪄\n3 - Arquero 🏹\n4 - Hechicero 🔮"
+  "Elige tu personaje:\n1 - Guerrero ⚔️\n2 - Mago 🪄\n3 - Arquero 🏹\n4 - Hechicero 🔮",
 );
 
 // Ejecutar la elección
@@ -114,7 +114,8 @@ function sumar(primerNumero, segundoNumero) {
 
 sumar(5, 6);
 
-//Se puede acceder y modificar la variable resultado desde la funcion sumar porque es global
+//Se puede acceder y modificar la variable resultado
+// desde la funcion sumar porque es global
 
 console.log(resultado); //11
 
@@ -220,10 +221,10 @@ if (isNaN(precio1) || isNaN(precio2)) {
 
   // Salida formateada
   console.log(
-    `Suma: $${sumaTotal.toFixed(2)} - IVA (21%): $${ivaSobreSuma.toFixed(2)}`
+    `Suma: $${sumaTotal.toFixed(2)} - IVA (21%): $${ivaSobreSuma.toFixed(2)}`,
   );
   console.log(
-    `Resta: $${restaTotal.toFixed(2)} - IVA (21%): $${ivaSobreResta.toFixed(2)}`
+    `Resta: $${restaTotal.toFixed(2)} - IVA (21%): $${ivaSobreResta.toFixed(2)}`,
   );
 }
 
@@ -236,7 +237,7 @@ let numeroTarea = 0;
 
 function mostrarMenuDeOpciones() {
   return prompt(
-    "Ingresa una opción para continuar:\n 1. Ingresar una nueva tarea\n 2. Ver mis tareas\n 3. Salir\n"
+    "Ingresa una opción para continuar:\n 1. Ingresar una nueva tarea\n 2. Ver mis tareas\n 3. Salir\n",
   );
 }
 

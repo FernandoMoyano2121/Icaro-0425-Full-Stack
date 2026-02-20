@@ -1,104 +1,98 @@
-/* const miArray = [1, 2, 3, 4, 5, 6];
-const letras = ["a", "b", "c", "d"]; */
+const miArray = [1, 2, 3, 4, 5, 6];
+const letras = ["a", "b", "c", "d"];
 
 // console.log(miArray);
-/* console.log(letras);
-console.log(letras.length); */
+console.log(letras);
+console.log(letras.length);
 
 //acceso a valores\elementos
-/* console.log(letras[0]);
-console.log(letras[2]); */
+console.log(letras[0]);
+console.log(letras[2]);
 
-/* for (let i = 0; i < nombres.length; i++) {
+//Recorriendo array con bucle for
+for (let i = 0; i < nombres.length; i++) {
   console.log(nombres[i]);
-  }
-  */
-
-//Recorriendo array con bucle for
-
-/* for (let index = 0; index < nombres.length; index++) {
-  const element = nombres[index];
-  console.log(element);
-  }
-  */
-
-//Recorriendo array con bucle for
+}
 
 /* Recorriendo array con  for of  */
-//const nombres = ["Fernando", "Luciano", "Celina", "Victoria"];
+const nombres = ["Fernando", "Luciano", "Celina", "Victoria"];
 
-/* for (let nombre of nombres) {
+for (let nombre of nombres) {
   console.log(nombre);
 }
- */
+
+//Recorriendo array con bucle for
+
+for (let index = 0; index < nombres.length; index++) {
+  const element = nombres[index];
+  console.log(element);
+}
 
 //----------------------------------------------------------
 //                          POP()
 //----------------------------------------------------------
 
-/* const nombreEliminado1 = nombres.pop();
+const nombreEliminado1 = nombres.pop();
 console.log(nombres);
 console.log(nombreEliminado1);
- */
 
 //----------------------------------------------------------
 //                          SHIFT()
 //----------------------------------------------------------
 
-/* let nombreEliminado2 = nombres.shift();
+let nombreEliminado2 = nombres.shift();
 console.log(nombres);
-console.log(nombreEliminado2); */
+console.log(nombreEliminado2);
 
 //----------------------------------------------------------
 //                          PUSH()
 //----------------------------------------------------------
 
-/* const nuevaLongitud1 = nombres.push("Emiliano");
+const nuevaLongitud1 = nombres.push("Emiliano");
 console.log(nombres);
 console.log(nuevaLongitud1);
- */
 
 //--------------------------------------------------------
 //                        UNSHIFT()
 //--------------------------------------------------------
 
-/* const nuevaLongitud2 = nombres.unshift("Guillermo");
+const nuevaLongitud2 = nombres.unshift("Guillermo");
 console.log(nombres);
-console.log(nuevaLongitud2); */
+console.log(nuevaLongitud2);
 
 //------------------------------------------------------
 //                       SPLICE()
 //------------------------------------------------------
 
-/* let elementosRemovidos = nombres.splice(1, 2);
+let elementosRemovidos = nombres.splice(1, 2);
 console.log(nombres);
-console.log(elementosRemovidos); */
+console.log(elementosRemovidos);
 
 //---------------------------------------------------------
 //                         JOIN()
 //--------------------------------------------------------
 
 //console.log(nombres.join("**"));
-/* const nombresConSeparador = nombres.join("--");
-console.log(nombresConSeparador); */
+const nombresConSeparador = nombres.join("--");
+console.log(nombresConSeparador);
 
 //---------------------------------------------------------
 //                         CONCAT()
 //---------------------------------------------------------
 
-/* const listadoDeNombres1 = ["Pedro", "Martin"];
+const listadoDeNombres1 = ["Pedro", "Martin"];
 const listadoDeNombres2 = ["Juan", "Fernando"];
 
 console.log(listadoDeNombres1.concat(listadoDeNombres2));
 
 let listadoCompleto = listadoDeNombres1.concat(listadoDeNombres2);
-console.log(listadoCompleto); */
+console.log(listadoCompleto);
 
 //------------------------------------------------------------
 //              FUNCIONES DE ORDEN SUPERIOR
 //------------------------------------------------------------
 
-/* function sumar(a, b) {
+function sumar(a, b) {
   return a + b;
 }
 
@@ -111,58 +105,58 @@ function calcular(a, b, fn) {
 }
 
 console.log(sumar(5, 8));
-console.log(calcular(5, 8, sumar)); */
+console.log(calcular(5, 8, sumar));
 
-const nombres = ["Fernando", "Luciano", "Celina", "Victoria"];
+//const nombres = ["Fernando", "Luciano", "Celina", "Victoria"];
 
 //-------------------------------------------------------
 //                          FOREACH
 //--------------------------------------------------------
 
-/* nombres.forEach((elemento) => {
+nombres.forEach((elemento) => {
   console.log(elemento);
-}); */
+});
 
 //-------------------------------------------------------
 //        CONSTRUCCION RUDIMENTARIA DE FOR EACH
 //-------------------------------------------------------
 
-/* function porCadaUno(array, funcionInferior) {
+function porCadaUno(array, funcionInferior) {
   for (let elemento of array) {
     funcionInferior(elemento);
   }
 }
 
-porCadaUno(nombres, console.log); */
+porCadaUno(nombres, console.log);
 
 //----------------------------------------------------------
 //                        FIND()
 //----------------------------------------------------------
 
-/* const misNumeros = [1, 2, 3, 4, 5, 6, 7, 8];
- */
-/* const numeroMayorACinco = misNumeros.find((numero) => {
+const misNumeros = [1, 2, 3, 4, 5, 6, 7, 8];
+
+const numeroMayorACinco = misNumeros.find((numero) => {
   return numero > 5;
-}); */
+});
 
 /* const numeroMayorACinco = misNumeros.find((numero) => numero > 5);
 console.log(numeroMayorACinco);
  */
-
 //------------------------------------------------------------
 //                        FILTER()
 //------------------------------------------------------------
 
-/* const numerosMayoresACinco = misNumeros.filter((numero) => numero > 5);
-console.log(numerosMayoresACinco); */
+const numerosMayoresACinco = misNumeros.filter((numero) => numero > 5);
+console.log(numerosMayoresACinco);
 
 //------------------------------------------------------------
 //                           MAP()
 //------------------------------------------------------------
 
-/* const numerosMultiplicados = misNumeros.map((numero) => numero * 2);
+const numerosMultiplicados = misNumeros.map((numero) => numero * 2);
 console.log(numerosMultiplicados);
- */
+
+/* ---------------------------------------------------- */
 
 const listaDeParticipantes = [];
 let totalDeParticipantes = 5;
