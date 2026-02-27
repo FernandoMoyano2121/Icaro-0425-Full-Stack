@@ -3,7 +3,7 @@ function Persona(nombre, edad) {
   this.edad = edad;
 }
 
-/* const persona1 = new Persona("Fernando", 33); */
+const persona1 = new Persona("Fernando", 33);
 
 /* ------------------CLASE PERSONA----------------------- */
 
@@ -18,8 +18,8 @@ class Persona {
   }
 }
 
-/* const persona1 = new Persona("Fernando", 33);
-const persona2 = new Persona("Luciano", 25); */
+const persona2 = new Persona("Fernando", 33);
+const persona3 = new Persona("Luciano", 25);
 
 /* ------------------CLASE AUTO----------------------- */
 
@@ -47,10 +47,10 @@ class Animal {
 }
 
 //Instanciar los objetos
-/* const perro = new Animal("Rex", "perro"); */
+const perro = new Animal("Rex", "perro");
 
 //ejecucion del metodo
-/* perro.describir(); */
+perro.describir();
 
 /* ********************** HERNCIA **************************/
 
@@ -118,17 +118,17 @@ class Persona {
   }
 }
 
-const persona1 = new Persona("Fernando");
+const persona4 = new Persona("Fernando");
 
 //set
-persona1.nombre = "Luis";
+persona4.nombre = "Luis";
 //get
-console.log(persona1.nombre);
+console.log(persona4.nombre);
 
 /************** MODIFICADORES DE ACCESO ********************/
 
-/* class CuentaBancaria {
-  #saldo;
+class CuentaBancaria {
+  #saldo; //propiedad privada
 
   constructor(saldoInicial) {
     this.#saldo = saldoInicial;
@@ -144,4 +144,3 @@ const miCuentaBancaria = new CuentaBancaria(1500);
 
 //console.log(miCuentaBancaria.#saldo);
 miCuentaBancaria.depositarDinero(500);
- */
