@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,6 +7,8 @@
     <style>
       .contenedorProductos {
         display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 2rem;
       }
       /* --- Estilos de la tarjeta --- */
@@ -58,29 +60,53 @@
     </style>
   </head>
   <body>
+    <!-- --------------------EVENTO CLICK --------------------------->
+
     <!--  <button onclick="alert('Bienvenidos')">Click</button> -->
     <!-- <button id="button">Saludo</button> -->
 
+    <!-- ----------------------EVENTO INPUT -------------------------->
     <input id="input" type="text" />
 
     <br />
     <br />
+
+    <!-- -------------------EVENTO MOUSEOVER --------------------->
 
     <button id="button">Button</button>
 
     <br />
     <br />
 
-    <a id="enlace" href="">Enlace</a>
+    <!-- ---------------------PREVENTDEFAULT() ------------------>
 
-    <br />
-    <br />
+    <h2>Formulario de contacto</h2>
 
+    <form id="miFormulario">
+      <label>
+        Nombre:
+        <input type="text" name="nombre" required />
+      </label>
+      <br /><br />
+
+      <label>
+        Email:
+        <input type="email" name="email" required />
+      </label>
+      <br /><br />
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <!-- ------------- ELEMENTO HTML Y SU PROPIEDAD STY ------------>
     <div id="contenedor">1</div>
     <hr />
     <br />
     <br />
 
+    <!-- ----------------------- ECCOMERCE  ------------------------>
     <!-- Tarjeta -->
 
     <div class="contenedorProductos">
@@ -107,5 +133,13 @@
     <ul id="listaCompras"></ul>
 
     <script src="./app.js"></script>
+    <!--
+    - Si quisieras hacerlo más profesional:
+    - Guardar carrito en un array (estado real)
+    - Re-renderizar el carrito completo en cada cambio
+    - Separar lógica de render y lógica de negocio
+    - Persistir en localStorage
+    - Usar delegación de eventos en vez de un listener por botón
+     -->
   </body>
 </html>

@@ -1,13 +1,12 @@
-/* EVENTO CLICK */
+/* ************************** EVENTO CLICK *******************************/
 
-/* const button = document.getElementById("button");
+const button1 = document.getElementById("button");
 
-button.addEventListener("click", function (evento) {
+button1.addEventListener("click", function (evento) {
   console.log(evento);
 });
- */
 
-/* EVENTO INPUT */
+/* ************************** EVENTO INPUT ******************************/
 
 const input = document.getElementById("input");
 
@@ -15,7 +14,7 @@ input.addEventListener("input", (evento) => {
   console.log(`Informacion ingresada por el usuario: ${evento.target.value}`);
 });
 
-/* EVENTO MOUSEOVER */
+/* ************************ EVENTO MOUSEOVER ****************************/
 
 function mouseOver() {
   console.log("Por encima de button");
@@ -24,16 +23,29 @@ function mouseOver() {
 const button = document.getElementById("button");
 button.addEventListener("mouseover", mouseOver);
 
-button.removeEventListener("mouseover", mouseOver);
+//button.removeEventListener("mouseover", mouseOver);
 
-/* PREVENTDEFAULT() */
-const enlace = document.getElementById("enlace");
-enlace.addEventListener("click", (evento) => {
-  evento.preventDefault();
-  console.log("Enlace clickeado, navegación detenida");
+/* ************************ PREVENTDEFAULT() ****************************/
+
+const formulario = document.getElementById("miFormulario");
+
+formulario.addEventListener("submit", function (event) {
+  // 🔴 Evita que el navegador recargue la página
+  event.preventDefault();
+
+  // Obtener los valores del formulario
+  const datos = new FormData(formulario);
+  const nombre = datos.get("nombre");
+  const email = datos.get("email");
+
+  // Mostrar resultado en pantalla
+  document.getElementById("resultado").textContent =
+    `Nombre: ${nombre} - Email: ${email}`;
+
+  console.log("Formulario procesado sin recargar");
 });
 
-/* ELEMENTO HTML Y SU PROPIEDAD STYLE  */
+/* **************** ELEMENTO HTML Y SU PROPIEDAD STYLE  *****************/
 
 const contenedor = document.getElementById("contenedor");
 
@@ -52,7 +64,8 @@ const lista = document.getElementById("listaCompras");
 
 botones.forEach((boton) => {
   boton.addEventListener("click", () => {
-    const nombreProducto = boton.dataset.nombre; //Obtener el nombre del prod.
+    //Obtener el nombre del prod.
+    const nombreProducto = boton.dataset.nombre;
 
     //Crea un nuevo item de lista
     const item = document.createElement("li");

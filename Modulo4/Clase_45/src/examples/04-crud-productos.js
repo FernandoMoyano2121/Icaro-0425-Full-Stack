@@ -2,6 +2,9 @@ import { Op } from "sequelize";
 import sequelize from "../../db/conexion.js";
 import Producto from "../../models/Producto.js";
 
+// =============================================================================
+// CREATE — Insertar los mismos productos de la Clase 44
+// =============================================================================
 async function insertarProductos() {
   const productos = await Producto.bulkCreate([
     {
@@ -87,9 +90,16 @@ async function insertarProductos() {
   console.log(`${productos.length} productos insertados`);
 }
 
+// =============================================================================
+// READ — findAll con WHERE, ORDER y LIMIT
+// =============================================================================
 async function productosMasCaros() {
   console.log("[findAll + Op.gt + limit] Los 3 productos más caros:");
 
+  // bulkCreate() inserta múltiples registros en una sola query.
+  // Equivale a INSERT INTO ... VALUES (...), (...), (...)
+  // Usamos los mismos productos del tienda_completa.sql de Clase 44
+  // para mantener consistencia entre los ejemplos.
   const productos = await Producto.findAll({
     where: { precio: { [Op.gt]: 1000 } }, //WHERE precio > 1000
     order: [["precio", "DESC"]], //ORDER BY precio DESC
