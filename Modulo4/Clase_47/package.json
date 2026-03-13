@@ -1,0 +1,20 @@
+{
+  "name": "clase-47-seguridad",
+  "version": "1.0.0",
+  "description": "Clase 47 - Prácticas de seguridad en el backend",
+  "type": "module",
+  "scripts": {
+    "01": "node ejemplos/01-validacion/index.js",
+    "02": "node ejemplos/02-sanitizacion-sql/index.js",
+    "03": "node ejemplos/03-hashing-bcrypt/index.js",
+    "04": "node ejemplos/04-rutas-protegidas/index.js",
+    "05": "node ejemplos/05-practica-registro/index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

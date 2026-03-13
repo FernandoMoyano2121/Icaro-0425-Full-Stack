@@ -1,34 +1,34 @@
-/* TIPOS DE NODO */
-/* const parrafo = document.querySelector("p");
+/* **************************** TIPOS DE NODO ****************************/
+
+const parrafo = document.querySelector("p");
 console.log(parrafo.nodeType); //1
-console.log(parrafo.firstChild.nodeType); */
+console.log(parrafo.firstChild.nodeType);
 
-/* CREAR E INSERTAR ELEMENTOS  */
+/* ********************* CREAR E INSERTAR ELEMENTOS  *******************/
 
-/* const contenedor = document.querySelector(".contenedor");*/
+const contenedor = document.querySelector(".contenedor");
 
-/* const parrafo = document.createElement("p");
-parrafo.textContent = "Hola Queridos alumnos";
+const parrafo1 = document.createElement("p");
+parrafo1.textContent = "Hola Queridos alumnos";
 
-contenedor.appendChild(parrafo); */
+contenedor.appendChild(parrafo1);
 
-/* --------- */
+/* ----------------------------------------------------------------- */
 
-/* const nuevoElemento = document.createElement("h2");
+const nuevoElemento = document.createElement("h2");
 nuevoElemento.textContent = "éste es un nuevo titulo";
 titulo.insertBefore(nuevoElemento, titulo.firstChild);
-titulo.appendChild(nuevoElemento); */
+titulo.appendChild(nuevoElemento);
 
-/* CLONNODE */
-/* 
-const contenedor = document.getElementById("contenedor");
+/* ********************************CLONNODE ****************************/
+
+/* const contenedor = document.getElementById("contenedor");
 const parrafo = document.getElementById("parrafo");
 
 const parrafoDuplicado = parrafo.cloneNode(true);
 contenedor.appendChild(parrafoDuplicado);
 
-contenedor.removeChild(parrafoDuplicado);
- */
+contenedor.removeChild(parrafoDuplicado); */
 
 //-------------------------------------------------------------
 //                    LISTA DE TAREAS
