@@ -1,16 +1,128 @@
-# React + Vite
+# ⚡ ¿Qué es Vite y para qué se usa en React?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🧩 ¿Qué es Vite?
 
-Currently, two official plugins are available:
+Vite es una herramienta moderna de desarrollo frontend que funciona como:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Servidor de desarrollo (dev server)
+- Empaquetador (bundler) para producción
 
-## React Compiler
+Fue creada para ser **rápida y ligera**, aprovechando módulos nativos del navegador (ES Modules).
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
 
-## Expanding the ESLint configuration
+## 🚀 ¿Para qué se usa en React?
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+En el contexto de React, Vite se utiliza para:
+
+### 1. Crear proyectos rápidamente
+
+Permite inicializar una app React en segundos:
+
+```bash
+npm create vite@latest
+```
+
+### 2. Desarrollo ultrarrápido
+
+- Arranque instantáneo del servidor
+- Hot Module Replacement (HMR) muy veloz
+- Cambios visibles casi al instante sin recargar toda la app
+
+### 3. Build optimizado para producción
+
+- Usa herramientas como Rollup internamente
+- Genera archivos optimizados y livianos
+- Mejora el rendimiento de la app final
+
+### 4. Mejor experiencia de desarrollo (DX)
+
+- Configuración mínima (casi “zero config”)
+- Soporte nativo para TypeScript
+- Integración sencilla con librerías de React
+
+## ⚙️ ¿Cómo funciona con React?
+
+- Vite no reemplaza React, sino que lo acompaña:
+  - React → se encarga de la UI
+  - Vite → se encarga del entorno de desarrollo y build
+
+## 👉🏻 Que es un build
+
+Un proceso de build es, básicamente, la etapa donde tu código fuente (el que escribís como desarrollador) se transforma en una versión optimizada, compatible y lista para producción.
+
+En desarrollo trabajás con código cómodo de leer y modificar; en el build eso se convierte en algo que el navegador pueda ejecutar rápido y eficientemente.
+
+### 🔄 1. Transpilación (JSX → JavaScript)
+
+React usa JSX:
+
+```jsx
+const App = () => <h1>Hola</h1>;
+```
+
+Eso no lo entiende el navegador directamente, así que se transforma en JavaScript puro:
+
+```js
+const App = React.createElement("h1", null, "Hola");
+```
+
+### 📦 2. Bundling (empaquetado)
+
+Tu app tiene múltiples archivos:
+
+- Componentes
+- Estilos
+- Utilidades
+
+Vite los agrupa en archivos optimizados finales:
+
+```txt
+/assets/index-abc123.js
+/assets/index-xyz456.css
+```
+
+### ✂️ 3. Minificación
+
+Se elimina todo lo innecesario:
+
+- Espacios
+- Comentarios
+- Nombres largos de variables
+
+### 🌳 4. Tree Shaking
+
+Elimina código que no se utiliza:
+
+```jsx
+import { suma, resta } from "./math";
+```
+
+Si solo usás suma, resta no se incluye en el build final.
+
+### ⚡ 5. Code Splitting
+
+Divide la app en partes para cargar solo lo necesario.
+
+Ejemplo:
+
+- Home → carga inicial
+- Dashboard → carga diferida (lazy loading)
+
+Mejora el tiempo de carga inicial.
+
+### 🎯 6. Optimización de assets
+
+- Imágenes comprimidas
+- CSS optimizado
+- Fuentes optimizadas
+
+🔐 7. Hashing de archivos
+
+Los archivos finales tienen nombres únicos:
+
+```txt
+index-abc123.js
+```
+
+Esto evita problemas de caché en el navegador.

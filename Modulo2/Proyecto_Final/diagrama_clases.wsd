@@ -1,0 +1,78 @@
+@startuml Task App - Diagrama de Clases
+
+skinparam classAttributeIconSize 0
+skinparam classBorderColor #2c3e50
+skinparam classBackgroundColor #ecf0f1
+skinparam classHeaderBackgroundColor #2c3e50
+skinparam classFontColor #ffffff
+skinparam classHeaderFontColor #ffffff
+skinparam arrowColor #2c3e50
+skinparam linetype ortho
+
+' ─────────────────────────────────────────
+'  CLASES
+' ─────────────────────────────────────────
+
+class Task {
+  + id : Number
+  + nombre : String
+  + prioridad : String
+  + vencimiento : String
+  + completada : Boolean
+  ==
+  + constructor(id, nombre, prioridad,\n  vencimiento, completada)
+}
+
+class TaskManager {
+  - tareas : Task[]
+  - NextId : Number
+  ==
+  + constructor()
+  + agregar(nombre, prioridad, vencimiento) : void
+  + editar(id, nombre, prioridad, vencimiento) : void
+  + eliminar(id) : void
+  + marcarCompletada(id) : void
+  + obtenerPendientes() : Number
+}
+
+class TaskUi {
+  - manager : TaskManager
+  - tareaEditando : Task
+  - nombre : HTMLElement
+  - prioridad : HTMLElement
+  - vencimiento : HTMLElement
+  - btnAgregar : HTMLElement
+  - listado : HTMLElement
+  - pendientes : HTMLElement
+  ==
+  + constructor(manager : TaskManager)
+  + handleAgregar() : void
+  + cargarParaEdicion(tarea : Task) : void
+  + render() : void
+  + crearBoton(texto, clases) : HTMLElement
+  + limpiarFormulario() : void
+}
+
+class main <<entrypoint>> {
+  + manejador : TaskManager
+  + ui : TaskUi
+}
+
+' ─────────────────────────────────────────
+'  RELACIONES
+' ─────────────────────────────────────────
+
+' Composición: TaskManager crea y "posee" instancias de Task
+TaskManager "1" *-- "0..*" Task : crea y gestiona >
+
+' Agregación: TaskUi recibe y usa TaskManager (no lo crea)
+TaskUi "1" o-- "1" TaskManager : usa >
+
+' Dependencia: TaskUi referencia objetos Task (ej. tareaEditando)
+TaskUi ..> Task : <<usa en edición>>
+
+' Dependencia: main instancia ambas clases
+main ..> TaskManager : <<instancia>>
+main ..> TaskUi  : <<instancia>>
+
+@enduml
